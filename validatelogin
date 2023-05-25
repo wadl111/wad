@@ -1,0 +1,129 @@
+----------------------------------------------------index.html----------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm" onsubmit="return validateLoginForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+---------------------------------------------------styles.css-----------------------------------
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  
+---------------------------------------------------script.js-----------------------------------
+// Function to validate the login form
+function validateLoginForm() {
+    // Get form inputs
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+  
+    // Validate username
+    if (!isValidUsername(username)) {
+      displayErrorMessage("Invalid username. Username should contain at least one uppercase letter, one lowercase letter, one special character, one number, and have a minimum length of 8 characters.");
+      return false;
+    }
+  
+    // Validate password
+    if (!isValidPassword(password)) {
+      displayErrorMessage("Invalid password. Password should contain at least one uppercase letter, one special character, and have a minimum length of 8 characters.");
+      return false;
+    }
+  
+    // Form is valid, proceed with login
+    alert("Login successful!");
+    return true;
+  }
+  
+  // Function to validate the username format
+  function isValidUsername(username) {
+    var usernameRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
+    return usernameRegex.test(username);
+  }
+  
+  // Function to validate the password format
+  function isValidPassword(password) {
+    var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
+    return passwordRegex.test(password);
+  }
+  
+  // Function to display an error message
+  function displayErrorMessage(message) {
+    var errorMessage = document.createElement("p");
+    errorMessage.className = "error-message";
+    errorMessage.textContent = message;
+    var form = document.getElementById("loginForm");
+    form.appendChild(errorMessage);
+  }
+  
