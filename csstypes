@@ -1,0 +1,64 @@
+-------------------------------------------------External File--------------------------------------------
+---------------------------------------------index.html-------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>External Stylesheet Example</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is an example of an external stylesheet.</p>
+</body>
+</html>
+
+-------------------------------------------------styles.css-------------------------------------
+
+h1 {
+    color: blue;
+    font-size: 24px;
+  }
+  
+  p {
+    color: red;
+  }
+  
+  -------------------------------------------file ended-------------------------------------------
+  
+  ---------------------------------------------inline.html---------------------------------------
+  
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Styles Example</title>
+</head>
+<body>
+  <h1 style="color: blue; font-size: 24px;">Hello, World!</h1>
+  <p style="color: red;">This is an example of inline styles.</p>
+</body>
+</html>
+
+----------------------------------------------internal.html-------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internal Stylesheet Example</title>
+  <style>
+    h1 {
+      color: blue;
+      font-size: 24px;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is an example of an internal stylesheet.</p>
+</body>
+</html>
+  
