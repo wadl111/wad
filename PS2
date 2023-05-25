@@ -1,0 +1,74 @@
+------------------------------external.html---------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <title>External Style Sheet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to the Website</h1>
+  <p>This is an example of external styling.</p>
+</body>
+</html>
+
+
+--------------------------------------inline.html----------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Style Sheet</title>
+</head>
+<body>
+  <h1 style="color: blue; text-align: center;">Welcome to the Website</h1>
+  <p style="font-size: 18px; color: green;">This is an example of inline styling.</p>
+</body>
+</html>
+
+
+-----------------------------------------internal.html-----------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internal Style Sheet</title>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Website</h1>
+  <p>This is an example of internal styling.</p>
+</body>
+</html>
+
+
+
+------------------------------------style.css-----------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internal Style Sheet</title>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Website</h1>
+  <p>This is an example of internal styling.</p>
+</body>
+</html>
