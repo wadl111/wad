@@ -1,0 +1,155 @@
+--------------------------index.html----------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>College Admin Dashboard</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Faculty</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="sidebar">
+      
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li style="margin-top: 400px;"><a href="#">Logout</a></li>
+      </ul>
+      
+      
+      
+    </div>
+    <div class="main-content">
+      <h2>Main Content</h2>
+      <p>This is the main content area of the admin dashboard.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+-------------------------------------styles.css-----------------------------------
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a base font size */
+  html {
+    font-size: 16px;
+  }
+  
+  /* Apply some basic styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+  }
+  
+  /* Create a container for the dashboard */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  /* Create a sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .sidebar li a:hover {
+    color: #000;
+  }
+  
+
+  
+  /* Style the main content area */
+  .main-content {
+    padding: 10px;
+    width: 80%;
+    float: left;
+    margin-left: 50px;
+  }
+  
+  /* Apply responsive styles */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .sidebar,
+    .main-content {
+      width: 100%;
+      float: none;
+    }
+  }
+  
